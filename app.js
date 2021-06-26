@@ -64,7 +64,6 @@ const galleryItems = [
   },
 ];
 
-
 const galleryContainer = document.querySelector(".js-gallery");
 const modal = document.querySelector(".js-lightbox");
 const modalImg = document.querySelector(".lightbox__image");
@@ -89,7 +88,6 @@ function galleryCardMarkup(img) {
                           alt=${description} />
                     </a>
                     </li>`
-
   }).join("");
 
 };
@@ -98,11 +96,9 @@ function modalOpen(event) {
   event.preventDefault();
 
   if (event.target.nodeName === "IMG") {
-
     modal.classList.add('is-open');
     modalImg.src = event.target.dataset.source;
     modalImg.alt = event.target.alt;
-
   }
 
   return
@@ -113,7 +109,16 @@ modalBtnClose.addEventListener('click', modalClose);
 
 
 function modalClose(event) {
+
   modal.classList.remove('is-open');
   modalImg.removeAttribute("src");
   modalImg.removeAttribute("alt");
+
 }
+
+
+
+
+
+
+
